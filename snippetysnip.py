@@ -49,7 +49,7 @@ def main():
                                 # Increase count to then direct filenaming
                                 count+=1
                                 # Current playback time
-                                end = ((frame_count-1)/30)
+                                end = ((frame_count-15)/30)
                                 # Do the dirty work
                                 safe=15+frame_count
                                 os.system('ffmpeg -i {0} -ss {1} -t {2} ./TEMP/{3}.wmv'.format(filename, start, (end-start), count))
