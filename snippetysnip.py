@@ -48,7 +48,6 @@ def main():
                             if (frame_count >= safe):
                                 # Increase count to then direct filenaming
                                 count+=1
-                                # DEBUG
                                 # Current playback time
                                 end = ((frame_count-1)/30)
                                 # Do the dirty work
