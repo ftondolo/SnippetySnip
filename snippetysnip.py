@@ -7,6 +7,7 @@ import os
 
 def main():
     # Creating temporary directory
+    file_count=0
     os.mkdir('TEMP')
     # Loops for every file inside current dir
     for filename in os.listdir('.'):
@@ -14,6 +15,7 @@ def main():
         if (filename.endswith(".wmv")):
             cap = cv2.VideoCapture(filename)
             # Number of clips found
+            file_count+=1
             count = 0
             # No repetitions
             safe = 0
@@ -66,7 +68,7 @@ def main():
             # Close list txt
             f.close()
             # Do the leftover laundry
-            os.system('ffmpeg -f concat -safe 0 -i ./TEMP/list.txt -c copy ./final.wmv')
+            os.system('ffmpeg -f concat -safe 0 -i ./TEMP/list.txt -c copy ./final{0}.wmv'.format(file_count))
             os.system('rm -R TEMP')
          # If file is not a video
         else:
