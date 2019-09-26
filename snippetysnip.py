@@ -55,7 +55,7 @@ def main():
                                 end = ((frame_count-1)/30)
                                 # Do the dirty work
                                 safe=30+frame_count
-                                subprocess.call(['ffmpeg', '-i', filename, '-ss', str(start), '-t', str(end-start), ('./TEMP/'+str(count)+'.wmv')])
+                                subprocess.call(['ffmpeg', '-i'
                                 start = (safe/30)
             # Write/Add file to list
             f= open("./TEMP/list.txt","w+")
@@ -69,7 +69,8 @@ def main():
             # Close list txt
             f.close()
             # Do the leftover laundry
-            subprocess.call(['ffmpeg', '-f', 'concat', '-safe', '0', '-i', './TEMP/list.txt', '-c', 'copy', ('./final'+str(file_count)+'.wmv')])
+            subprocess.call(['ffmpeg', '-f', 'concat', '-safe', '0', '            subprocess.call(['ffmpeg', '-f', 'concat', '-safe', '0', '-i', './TEMP/list.txt', '-c', 'copy', ('./final'+str(file_count)+'.wmv')])
+-i', './TEMP/list.txt')])
             os.system('rm -R TEMP')
          # If file is not a video
         else:
