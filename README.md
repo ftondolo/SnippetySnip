@@ -1,5 +1,5 @@
 # SnippetySnip
-Program created with the purpose of analysing a video and removing occasional blue flashes which occur within it.  More specifically, when a blue flash (usually lasting around 500ms and in 30s intervals) these are removed and the two loose video ends are stitched back together.  The program works its magic on every single wmv file in its directory creating a TEMP folder in which files with the format  `<clip#>.wmv` are saved, these are the intervals of video between the blue screens.  After the program has traversed the video a text file is created with all the wmv filenames and then this file is used to concatenate all of the wmvs together.  The resultant file is then saved as final.wmv in the parent directory and at this point thee entirety of the TEMP directory is deleted.
+Program created with the purpose of analysing a video and removing occasional blue flashes which occur within it.  More specifically, when a blue flash (usually lasting around 500ms and in 30s intervals) these are removed and the two loose video ends are stitched back together.  The program works its magic on every single WMV file in its directory creating a TEMP folder in which files with the format  `<clip#>.wmv` are saved, these are the intervals of video between the blue screens.  After the program has traversed the video a text file is created with all the wmv filenames and then this file is used to concatenate all of the WMVs together.  The resultant file is then saved as final.wmv in the parent directory and at this point thee entirety of the TEMP directory is deleted.
 
   
 ## Notice
@@ -36,7 +36,7 @@ _Administrator Privileges Required_
     - ffmpy :`pip install ffmpy`<br>
     - NumPy : `pip install  numpy`<br>
     - OpenCV : `pip install opencv-python`<br>
-2) Download snippetysnip.py and position it in a folder with all of the .wmv files you want examined<br>
+2) Download snippetysnip.py and position it in a folder with all of the .WMV files you want examined<br>
 3) Open a Terminal window and navigate to the directory which you have selected
    > `cd /...`
   
