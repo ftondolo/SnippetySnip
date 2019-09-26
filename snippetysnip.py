@@ -69,8 +69,7 @@ def main():
             # Close list txt
             f.close()
             # Do the leftover laundry
-            subprocess.call(['ffmpeg', '-f', 'concat', '-safe', '0', '            subprocess.call(['ffmpeg', '-f', 'concat', '-safe', '0', '-i', './TEMP/list.txt', '-c', 'copy', ('./final'+str(file_count)+'.wmv')])
--i', './TEMP/list.txt')])
+            subprocess.call(['ffmpeg', '-f', 'concat', '-safe', '0', '-i', './TEMP/list.txt', '-c', 'copy', ('./final'+str(file_count)+'.wmv')])
             os.system('rm -R TEMP')
          # If file is not a video
         else:
