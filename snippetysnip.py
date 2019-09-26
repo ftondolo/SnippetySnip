@@ -4,6 +4,7 @@ import numpy as np
 import ffmpy
 import cv2
 import os
+import subprocess
 
 def main():
     # Creating temporary directory
@@ -54,7 +55,7 @@ def main():
                                 end = ((frame_count-15)/30)
                                 # Do the dirty work
                                 safe=15+frame_count
-                                os.system('ffmpeg -i {0} -ss {1} -t {2} ./TEMP/{3}.wmv'.format(filename, start, (end-start), count))
+                                subprocess.call(['ffmpeg', '-i', filename, '-ss', str(start), '-t', str(end-start), ('./TEMP/'+str(count)+'.wmv')])
                                 start = (safe/30)
             # Write/Add file to list
             f= open("./TEMP/list.txt","w+")
@@ -68,7 +69,7 @@ def main():
             # Close list txt
             f.close()
             # Do the leftover laundry
-            os.system('ffmpeg -f concat -safe 0 -i ./TEMP/list.txt -c copy ./final{0}.wmv'.format(file_count))
+            subprocess.call(['ffmpeg', '-f', 'concat', '-safe', '0', '-i', './TEMP/list.txt', '-c', 'copy', ('./final'+str(file_count)+'.wmv')])
             os.system('rm -R TEMP')
          # If file is not a video
         else:
