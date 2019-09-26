@@ -52,9 +52,9 @@ def main():
                                 # Increase count to then direct filenaming
                                 count+=1
                                 # Current playback time
-                                end = ((frame_count-15)/30)
+                                end = ((frame_count-1)/30)
                                 # Do the dirty work
-                                safe=15+frame_count
+                                safe=30+frame_count
                                 subprocess.call(['ffmpeg', '-i', filename, '-ss', str(start), '-t', str(end-start), ('./TEMP/'+str(count)+'.wmv')])
                                 start = (safe/30)
             # Write/Add file to list
