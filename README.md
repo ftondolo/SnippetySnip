@@ -3,7 +3,7 @@ Program created with the purpose of analysing a video and removing occasional bl
 
   
 ## Notice
-Due to the naming structure, __it is necessary that there are no folders named 'TEMP' in the program's directory, and that every wmv filename have no spaces in it__. Moreover, __this program was designed to work solely with greyscale video__. Lastly, if possible, place lightbulb in such a way as to eliminate extraneous light in its immediate vicinity whether it be caused by other lights or the lightbulb's own reflection <br>
+Due to the naming structure, __it is necessary that there are no folders named 'TEMP' in the program's directory__. Moreover, __this program was designed to work solely with greyscale video__. Lastly, if possible, place lightbulb in such a way as to eliminate extraneous light in its immediate vicinity whether it be caused by other lights or the lightbulb's own reflection <br>
 
 ## Windows Install
 _Administrator Privileges Required_
