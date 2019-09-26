@@ -55,7 +55,7 @@ def main():
                                 end = ((frame_count-1)/30)
                                 # Do the dirty work
                                 safe=30+frame_count
-                                subprocess.call(['ffmpeg', '-i'
+                                subprocess.call(['ffmpeg', '-i', filename, '-ss', str(start), '-t', str(end-start), ('./TEMP/'+str(count)+'.wmv')])
                                 start = (safe/30)
             # Write/Add file to list
             f= open("./TEMP/list.txt","w+")
