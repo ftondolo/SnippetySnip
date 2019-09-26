@@ -11,7 +11,7 @@ def main():
     file_count=0
     os.mkdir('TEMP')
     # Loops for every file inside current dir
-    for filename in os.listdir('.'):
+    for filename in sorted(os.listdir('.')):
         # If file is a video file
         if (filename.endswith(".wmv")):
             cap = cv2.VideoCapture(filename)
